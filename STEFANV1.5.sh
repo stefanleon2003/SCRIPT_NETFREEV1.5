@@ -1,119 +1,311 @@
-#!/usr/bin/env bash
-#
-# CREATE BY STEFAN DESTRUCTOR
-# VERION 1.5
-# :)
-STEFAN=$(mktemp)
-base64 -d  >${STEFAN}<<DIXIE
-IyEvYmluL2Jhc2gKY2xlYXIKZWNobyAtZW4gIlxlWzkzbSIKdG9pbGV0IC1mIHNtYmxvY2sgQklF
-TlZFTklET1MKZWNobyAiIgplY2hvICIiCmVjaG8gLWVuICJIT0xBIEJJRU5WRU5JREAgSU5TVEFM
-QVJFIFVOT1MgQ09NQU5ET1MgQ09OIEZJTkUgREUgTEEgQ09NVU5JREFEIEFMIFVTQVIgRUwgU0NS
-SVBUICIKZWNobyAiIgplY2hvICIiCmVjaG8gLWVuICJFU1RPUyBDT01BTkRPUyBOTyBIQVJBTiBO
-SU5HVU4gREHDkU8gU0kgVEUgUElERSBBQ0VQVEFSIFNPTyBERUJFUyBEQVJMRSAoWSkgWSBFU1RB
-UkEgTElTVE8uICIKZWNobyAiIgplY2hvICIiCnNsZWVwIDUKCiNhcHQgaW5zdGFsbCB0b2lsZXQK
-I2FwayBpbnN0YWxsIGZpZ2xldAoKY2xlYXIKZWNobyAtZW4gIlxlWzk2bSIKdG9pbGV0IC1mIHNt
-YmxvY2sgIENSRUFURSAgQlkKZWNobyAiIgplY2hvIC1lbiAiXGVbOTNtIgp0b2lsZXQgLWYgc21i
-bG9jayAgU1RFRkFOIC0gREVTVFJVQ1RPUgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzk0
-bSIKdG9pbGV0IC1mIHNtYmxvY2sgIFYgMS41CgoKc2xlZXAgNQoKd2hpbGUgOgpkbwpjbGVhcgpl
-Y2hvIC1lbiAiXGVbOTZtIgp0b2lsZXQgLWYgc21ibG9jayAgTkVURlJFRQplY2hvIC1lbiAiXGVb
-OTZtIgp0b2lsZXQgLWYgc21ibG9jayAgQlkgU1RFRkFOIC0gREVTVFJVQ1RPUgplY2hvIC1lbiAi
-XGVbOTNtIgp0b2lsZXQgLWYgc21ibG9jayAgViAxLjUKZWNobyAiIgplY2hvIC1lbiAiXGVbOTFt
-Igp0b2lsZXQgLWYgc21ibG9jayBDUkVBVEUgQlkgU1RFRkFOIC0gREVTVFJVQ1RPUgplY2hvICIi
-CmVjaG8gIiIKZWNobyAtZW4gIlxlWzk2bVsxXS4uLlxlWzk2bUJVU0NBUiBIT1NUUyIKZWNobyAi
-IgplY2hvICIiCmVjaG8gLWVuICAiXGVbOTVtWzJdLi4uXGVbOTVtRVNDQU5FQVIgUFVFUlRPUyIK
-ZWNobyAiIgplY2hvICIiCmVjaG8gLWVuICJcZVs5NG1bM10uLi5cZVs5NG1JUCBHRU9MT0NBTEla
-QUNJT04iCmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAiXGVbOTNtWzRdLi4uXGVbOTNtQ0hFQ0tF
-QVIgRVNUQURPIERFTCBIT1NUIgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkybVs1XS4u
-LlxlWzkybUdFTkVSQURPUiBERSBQQVlMT0FEIgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxl
-Wzk1bVs2XS4uLlxlWzk1bVRFU1QgREUgVkVMT0NJREFEIERFTCBIT1NUIgplY2hvICIiCmVjaG8g
-IiIKZWNobyAtZW4gIlxlWzk3bVs3XS4uLlxlWzk3bUNSRURJVE9TIgplY2hvICIiCmVjaG8gIiIK
-ZWNobyAtZW4gIlxlWzkxbVswXS4uLlxlWzkxbVNBTElSIERFTCBTQ1JJUFQiCmVjaG8gIiIKZWNo
-byAiIgplY2hvIC1lbiAtbiAiXGVbOTNtU0VMRUNJT05FIFNVIE9QQ0lPTiA6ICIKcmVhZCBvcGNp
-b24KY2FzZSAkb3BjaW9uIGluCjEpY2xlYXIKZWNobyAtZW4gIlxlWzk3bSIKdG9pbGV0IC1mIHNt
-YmxvY2sgQlVTQ0FET1IKZWNobyAtZW4gIlxlWzk2bSIKdG9pbGV0IC1mIHNtYmxvY2sgREUgSE9T
-VAplY2hvIC1lbiAtbiAiXGVbOTNtSU5HUkVTRSBFTCBIT1NUIEJBU0UgUEFSQSBFU0NBTkVBUjog
-IgplY2hvIC1lbiAiXGVbOTZtIgpyZWFkIGhvc3QKZWNobyAiIgpzbGVlcCAyCmVjaG8gLWVuICAi
-XGVbOTJtVU4gTU9NRU5UTyIKc2xlZXAgMgplY2hvICIiCmVjaG8gIiIKc2xlZXAgMgplY2hvIC1l
-biAiXGVbOTJtQlVTQ0FORE8gSE9TVFMiCnNsZWVwIDIKZWNobyAiIgplY2hvICIiCnNsZWVwIDIK
-ZWNobyAtZW4gIlxlWzkybUhPU1RTIEVOQ09OVFJBRE9TIgplY2hvICIiCmVjaG8gIiIKY3VybCBo
-dHRwOi8vYXBpLmhhY2tlcnRhcmdldC5jb20vaG9zdHNlYXJjaC8/cT0kaG9zdApzbGVlcCAyCmVj
-aG8gIiIKZWNobyAiIgplY2hvIC1lbiAiXGVbOTJtQlkgU1RFRkFOIC0gREVTVFJVQ1RPUiIKZWNo
-byAiIgplY2hvICIiCmVjaG8gLWVuICJcZVs5MW1QUkVTSU9ORSBFTlRFUiBQQVJBIFJHUkVTQVIg
-QUwgSU5JQ0lPIgpyZWFkIGZvbwo7OwoyKWNsZWFyCmVjaG8gLWVuICJcZVs5N20iCnRvaWxldCAt
-ZiBzbWJsb2NrIEVTQ0FORUFSCmVjaG8gLWVuICJcZVs5Nm0iCnRvaWxldCAtZiBzbWJsb2NrIFBV
-RVJUT1MKZWNobyAtZW4gLW4gIlxlWzkzbUlOR1JFU0UgU1UgSE9TVCBBIEVTQ0FORUFSIDogIgpl
-Y2hvIC1lbiAiXGVbOTZtIgpyZWFkIGhvc3QKZWNobyAiIgpzbGVlcCAyCmVjaG8gLWVuICJcZVs5
-Mm1FU0NBTkVBTkRPIFBVRVJUT1MgREVMIEhPU1QiCmVjaG8gIiIKc2xlZXAgMgplY2hvICIiCmVj
-aG8gLWVuICJcZVs5Mm1QVUVSVE9TIEVOQ09OVFJBRE9TIgplY2hvICIiCmVjaG8gIiIKY3VybCBo
-dHRwOi8vYXBpLmhhY2tlcnRhcmdldC5jb20vbm1hcC8/cT0kaG9zdApzbGVlcCAyCmVjaG8gIiIK
-c2xlZXAgMgplY2hvIC1lbiAiXGVbOTFtUFJFU0lPTkUgRU5URVIgUkVHUkVTQVIgQUwgSU5JQ0lP
-IgpyZWFkIGZvbwo7OwozKWNsZWFyCmVjaG8gLWVuICJcZVs5Mm0iCnRvaWxldCAtZiBzbWJsb2Nr
-IENIRUNLRUFSCmVjaG8gLWVuICJcZVs5Mm0iCnRvaWV0IC1mIHNtYmxvY2sgR0VPIElQCmVjaG8g
-LWVuIC1uICJcZVs5M21JTkdSRVNFIEVMIElQL0hPU1QgOiAiCmVjaG8gLWVuICJcZVs5Mm0iCnJl
-YWQgaG9zdAplY2hvICIiCnNsZWVwIDIKZWNobyAtZW4gIlxlWzkybUJVU0NBTkRPIEdFT0xPQ0FM
-SVpBQ0lPTiBERUwgSE9TVCIKZWNobyAiIgplY2hvICIiCnNsZWVwIDIKZWNobyAtZW4gIlxlWzky
-bUdMRU9DQUxJWkFDSU9OIEVMIEhPU1QgRU5DT05UUkFEQSIKZWNobyAiIgplY2hvICIiCmN1cmwg
-aHR0cDovL2FwaS5oYWNrZXJ0YXJnZXQuY29tL2dlb2lwLz9xPSRob3N0CnNsZWVwIDIKZWNobyAi
-IgplY2hvICIiCmVjaG8gLWVuICJcZVs5MW1QUkVTSU9ORSBFTlRFUiBQQVJBIFJFR1JFU0FSIEFM
-IElOSUNJTyIKcmVhZCBmb28KOzsKNCljbGVhcgplY2hvIC1lbiAiXGVbOTNtIgp0b2lsZXQgLWYg
-c21ibG9jayAgRVNUQVRVUwplY2hvIC1lbiAiXGVbOTNtIgp0b2lldCAtZiBzbWJsb2NrIERFTCBI
-T1NUCmVjaG8gLWVuIC1uICJcZVs5M21JTkdSRVNFIFNVIEhPU1QgOiAiCmVjaG8gLWVuICJcZVsz
-NG0iCnJlYWQgaG9zdAplY2hvICIiCnNsZWVwIDIKZWNobyAtZW4gIlxlWzkybUNPTVBST0JBTkRP
-IEVTVEFUVVMgREVMIEhPU1QgSU5HUkVTQURPIgplY2hvICIiCnNsZWVwIDIKZWNobyAiIgplY2hv
-IC1lbiAiXGVbOTJtRVNUQURPIERFTCBIT1NUIENPTVBMRVRBRE8iCmVjaG8gIiIKZWNobyAiIgpj
-dXJsIGh0dHA6Ly9hcGkuaGFja2VydGFyZ2V0LmNvbS9odHRwaGVhZGVycy8/cT0kaG9zdApzbGVl
-cCAyCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkxbVBSRVNJT05FIEVOVEVSIFBBUkEgUkVHUkVTQVIg
-QUwgSU5JQ0lPIgpyZWFkIGZvbwo7OwowKWNsZWFyCmVjaG8gLWVuICJcZVs5M20iCnRvaWxldCAt
-ZiBzbWJsb2NrIEVYSVQKZWNobyAiIgplY2hvICIiCmVjaG8gLWVuICJcZVs5MW0iCnRvaWxldCAt
-ZiBDRVJSQU5ETyBFTCBTQ1JJUFQKZWNobyAiIgplY2hvICIiCmVjaG8gLWVuICJcZVs5NG0iCnRv
-aWxldCAtZiBWRVJTSU9OIERFIEVMIFNDUklQVCBbIDEuMCBdCnNsZWVwIDIKZWNobyAiIgplY2hv
-ICIiCmVjaG8gLWVuICJcZVs5MW0iCnRvaWxldCAtZiBDUkVBRE8gQlkgU1RFRkFOIC0gREVTVFJV
-Q1RPUgplY2hvICIiCmVjaG8gIiIKZWNobyAiIgpzbGVlcCAyCmVjaG8gLWVuICJcZVs5MW0iCnRv
-aWxldCAtZiBzbWJsb2NrIEdPT0QgQllFCnNsZWVwIDIKY2xlYXIKZWNobyAtZW4gIlxlWzkxbSIK
-bHMKZXhpdCAwCjs7CjUpY2xlYXIKZWNobyAtZW4gIlxlWzkzbSIKZmlnbGV0IEdFTkVSQURPUiBE
-RSBQQVlMT0FECmVjaG8gIiIKZWNobyAtZW4gIlxlWzk0bSIKZWNobyAtZW4gIkdFTkVSQURPUiBE
-RSBQQVlMT0FEICIKZWNobyAiIgplY2hvICIiCmVjaG8gLWVuIC1uICAiXGVbMTszM21QT1IgRkFW
-T1IgRElHSVRFIFNVIEhPU1Q6IFxlWzE7MzZtIgpyZWFkIGhvc3QKZWNobyAiIgplY2hvIC1lbiAi
-R0VUIGh0dHA6Ly8kaG9zdC8gSFRUUC8xLjFbY3JsZl1Ib3N0OiAkaG9zdFtjcmxmXSBBY2Nlc3Mt
-Q29udHJvbC1BbGxvdy1DcmVkZW50aWFsczogdHJ1ZSwgdHJ1ZVtsZl0gQWNjZXNzLUNvbnRyb2wt
-QWxsb3ctSGVhZGVyczogWC1SZXF1ZXN0ZWQtV2l0aCxDb250ZW50LVR5cGUsIFgtUmVxdWVzdGVk
-LVdpdGgsQ29udGVudC1UeXBlW2xmXSBBY2Nlc3MtQ29udHJvbC1BbGxvdy1NZXRob2RzOiBHRVQs
-UFVULE9QVElPTlMsUE9TVCxERUxFVEUsIEdFVCxQVVQsT1BUSU9OUyxQT1NULERFTEVURVtsZl0g
-QWdlOiA4LCA4W2xmXSBDYWNoZS1Db250cm9sOiBtYXgtYWdlPTg2NDAwW2xmXSBwdWJsaWNbbGZd
-IENvbm5lY3Rpb246IGtlZXAtYWxpdmVbbGZdIENvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFy
-c2V0PVVURi04W2NybGZdQ29udGVudC1MZW5ndGg6IDk5OTk5OTk5OTk5OTlbY3JsZl1Vc2VETlM6
-IFllc1tjcmxmXVZhcnk6IEFjY2VwdC1FbmNvZGluZ1tjcmxmXVtyYXddW2NybGZdW2NybGZdW2Ny
-bGZdIgplY2hvICIiCmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAiQ09OTkVDVCBbaG9zdF9wb3J0
-XVtwcm90b2NvbF1bY3JsZl1Ib3N0OiAkaG9zdCBbY3JsZl1bY3JsZl0iCmVjaG8gIiIKZWNobyAi
-IgpzbGVlcCAyCmVjaG8gIiIKZWNobyAtZW4gIkJZIFNURUZBTiBERVNUUlVDVE9SIgplY2hvICIi
-CmVjaG8gIiIKc2xlZXAgMgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkxbVBSRVNJT05F
-IEVOVEVSIFBBUkEgUkVHUkVTQVIgQUwgSU5JQ0lPIgpyZWFkIGZvbwo7Owo3KWNsZWFyCmVjaG8g
-LWVuICJcZVs5Mm0iCmZpZ2xldCBDUkVESVRPUwplY2hvIC1lbiAiXGVbOTJtIgpmaWdsZXQgQ1JF
-QURPIEJZIFNURUZBTiBERVNUUlVDVE9SCmVjaG8gLWVuICJcZVs5Mm0iCmZpZ2xldCBESVNFw5FP
-IAplY2hvICIiCnNsZWVwIDIKZWNobyAtZW4gIlxlWzkybUJZIFNURUZBTiAtIERFU1RSVUNUT1Ii
-CmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAgIlxlWzkzbVRFTEVHUkFNOiBAZWxwcm9sYXllciIK
-ZWNobyAiIgpzbGVlcCAyCmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAiXGVbOTJtQlkgUkVJRCBb
-VE1dIgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkzbVRFTEVHUkFNOiBAUkVsRHoiCmVj
-aG8gIiIKc2xlZXAgMgplY2hvICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkybUJZIOOAi+KYoMKl
-4piGe1HFsMOPw5HDmMWFxJjCp+KYoMOdw5jErsWFw4rFmH3imIbCpeKYoOOAiiIKZWNobyAiIgpl
-Y2hvICIiCmVjaG8gLWVuICJcZVs5M21URUxFR1JBTTogQGVscHJvdGFtb3Zpc3RhciIKZWNobyAi
-IgpzbGVlcCAyCmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAiXGVbOTJtQlkgVVNFUiMwIgplY2hv
-ICIiCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkzbVRFTEVHUkFNOiBARHVzZXJfMCIKZWNobyAiIgpz
-bGVlcCAyCmVjaG8gIiIKZWNobyAiIgplY2hvIC1lbiAiXGVbOTFtUFJFU0lPTkUgRU5URVIgUEFS
-QSBSRUdSRVNBUiBBTCBJTklDSU8iCnJlYWQgZm9vCjs7CjYpY2xlYXIKZWNobyAtZW4gIlxlWzkz
-bSIKdG9pbGV0IC1mIHNtYmxvY2sgIFZFTE9DSURBRAplY2hvIC1lbiAiXGVbOTNtIgp0b2lldCAt
-ZiBzbWJsb2NrIERFTCBIT1NUCmVjaG8gLWVuIC1uICJcZVs5M21JTkdSRVNFIFNVIEhPU1QgOiAi
-CkVjaG8gLWVuICJcZVszNG0iCnJlYWQgaG9zdAplY2hvICIiCnNsZWVwIDIKZWNobyAtZW4gIlxl
-WzkybUNPTVBST0JBTkRPIFZFTE9DSURBRCBERSBFTCBIT1NUIERFTCBIT1NUIElOR1JFU0FETyIK
-ZWNobyAiIgpzbGVlcCAyCmVjaG8gIiIKZWNobyAtZW4gIlxlWzkybVRFU1QgREUgVkVMT0NJREFE
-IERFTCBIT1NUIENPTVBMRVRBRE8iCmVjaG8gIiIKZWNobyAiIgpjdXJsIGh0dHBzOi8vYXBpLmhh
-Y2tlcnRhcmdldC5jb20vbnBpbmcvP3E9JGhvc3QKc2xlZXAgMgplY2hvICIiCmVjaG8gLWVuICJc
-ZVs5MW1QUkVTSU9ORSBFTlRFUiBQQVJBIFJFR1JFU0FSIEFMIElOSUNJTyIKcmVhZCBmb28KOzsK
-KiljbGVhcgplY2hvIC1lbiAiXGVbOTZtIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgZmlnbGV0IFVQUwplY2hvICIiCmVjaG8gLWVuICJcZVs5NW1DT01BTkRPIE5PIFZB
-TElBTElET1BPUiBGQVZPUiBJTkdSRVNFIFVOIENPTUFORE8gVkFJRE8iCmVjaG8gIiIKc2xlZXAg
-MgpiYXNoIGhvc3Quc2gKOzsKZXNhYwpkb25lCgo=
-DIXIE
-source ${STEFAN}
-rm -rf ${STEFAN}
+#!/bin/bash
+clear
+echo -en "\e[93m"
+toilet -f smblock BIENVENIDOS
+echo ""
+echo ""
+echo -en "HOLA BIENVENID@ INSTALARE UNOS COMANDOS CON FINE DE LA COMUNIDAD AL USAR EL SCRIPT "
+echo ""
+echo ""
+echo -en "ESTOS COMANDOS NO HARAN NINGUN DAÑO SI TE PIDE ACEPTAR SOO DEBES DARLE (Y) Y ESTARA LISTO. "
+echo ""
+echo ""
+sleep 5
+
+#apt install toilet
+#apk install figlet
+
+clear
+echo -en "\e[96m"
+toilet -f smblock  CREATE  BY
+echo ""
+echo -en "\e[93m"
+toilet -f smblock  STEFAN - DESTRUCTOR
+echo ""
+echo ""
+echo -en "\e[94m"
+toilet -f smblock  V 1.5
+
+
+sleep 5
+
+while :
+do
+clear
+echo -en "\e[96m"
+toilet -f smblock  NETFREE
+echo -en "\e[96m"
+toilet -f smblock  BY STEFAN - DESTRUCTOR
+echo -en "\e[93m"
+toilet -f smblock  V 1.5
+echo ""
+echo -en "\e[91m"
+toilet -f smblock CREATE BY STEFAN - DESTRUCTOR
+echo ""
+echo ""
+echo -en "\e[96m[1]...\e[96mBUSCAR HOSTS"
+echo ""
+echo ""
+echo -en  "\e[95m[2]...\e[95mESCANEAR PUERTOS"
+echo ""
+echo ""
+echo -en "\e[94m[3]...\e[94mIP GEOLOCALIZACION"
+echo ""
+echo ""
+echo -en "\e[93m[4]...\e[93mCHECKEAR ESTADO DEL HOST"
+echo ""
+echo ""
+echo -en "\e[92m[5]...\e[92mGENERADOR DE PAYLOAD"
+echo ""
+echo ""
+echo -en "\e[95m[6]...\e[95mTEST DE VELOCIDAD DEL HOST"
+echo ""
+echo ""
+echo -en "\e[97m[7]...\e[97mCREDITOS"
+echo ""
+echo ""
+echo -en "\e[91m[0]...\e[91mSALIR DEL SCRIPT"
+echo ""
+echo ""
+echo -en -n "\e[93mSELECIONE SU OPCION : "
+read opcion
+case $opcion in
+1)clear
+echo -en "\e[97m"
+toilet -f smblock BUSCADOR
+echo -en "\e[96m"
+toilet -f smblock DE HOST
+echo -en -n "\e[93mINGRESE EL HOST BASE PARA ESCANEAR: "
+echo -en "\e[96m"
+read host
+echo ""
+sleep 2
+echo -en  "\e[92mUN MOMENTO"
+sleep 2
+echo ""
+echo ""
+sleep 2
+echo -en "\e[92mBUSCANDO HOSTS"
+sleep 2
+echo ""
+echo ""
+sleep 2
+echo -en "\e[92mHOSTS ENCONTRADOS"
+echo ""
+echo ""
+curl http://api.hackertarget.com/hostsearch/?q=$host
+sleep 2
+echo ""
+echo ""
+echo -en "\e[92mBY STEFAN - DESTRUCTOR"
+echo ""
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA RGRESAR AL INICIO"
+read foo
+;;
+2)clear
+echo -en "\e[97m"
+toilet -f smblock ESCANEAR
+echo -en "\e[96m"
+toilet -f smblock PUERTOS
+echo -en -n "\e[93mINGRESE SU HOST A ESCANEAR : "
+echo -en "\e[96m"
+read host
+echo ""
+sleep 2
+echo -en "\e[92mESCANEANDO PUERTOS DEL HOST"
+echo ""
+sleep 2
+echo ""
+echo -en "\e[92mPUERTOS ENCONTRADOS"
+echo ""
+echo ""
+curl http://api.hackertarget.com/nmap/?q=$host
+sleep 2
+echo ""
+sleep 2
+echo -en "\e[91mPRESIONE ENTER REGRESAR AL INICIO"
+read foo
+;;
+3)clear
+echo -en "\e[92m"
+toilet -f smblock CHECKEAR
+echo -en "\e[92m"
+toiet -f smblock GEO IP
+echo -en -n "\e[93mINGRESE EL IP/HOST : "
+echo -en "\e[92m"
+read host
+echo ""
+sleep 2
+echo -en "\e[92mBUSCANDO GEOLOCALIZACION DEL HOST"
+echo ""
+echo ""
+sleep 2
+echo -en "\e[92mGLEOCALIZACION EL HOST ENCONTRADA"
+echo ""
+echo ""
+curl http://api.hackertarget.com/geoip/?q=$host
+sleep 2
+echo ""
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA REGRESAR AL INICIO"
+read foo
+;;
+4)clear
+echo -en "\e[93m"
+toilet -f smblock  ESTATUS
+echo -en "\e[93m"
+toiet -f smblock DEL HOST
+echo -en -n "\e[93mINGRESE SU HOST : "
+echo -en "\e[34m"
+read host
+echo ""
+sleep 2
+echo -en "\e[92mCOMPROBANDO ESTATUS DEL HOST INGRESADO"
+echo ""
+sleep 2
+echo ""
+echo -en "\e[92mESTADO DEL HOST COMPLETADO"
+echo ""
+echo ""
+curl http://api.hackertarget.com/httpheaders/?q=$host
+sleep 2
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA REGRESAR AL INICIO"
+read foo
+;;
+0)clear
+echo -en "\e[93m"
+toilet -f smblock EXIT
+echo ""
+echo ""
+echo -en "\e[91m"
+toilet -f smblock CERRANDO EL SCRIPT
+echo ""
+echo ""
+echo -en "\e[94m"
+toilet -f smblock VERSION DE EL SCRIPT [ 1.0 ]
+sleep 2
+echo ""
+echo ""
+echo -en "\e[91m"
+toilet -f smblock CREADO BY STEFAN - DESTRUCTOR
+echo ""
+echo ""
+echo ""
+sleep 2
+echo -en "\e[91m"
+toilet -f smblock GOOD BYE
+sleep 2
+clear
+echo -en "\e[91m"
+ls
+exit 0
+;;
+5)clear
+echo -en "\e[93m"
+figlet GENERADOR DE PAYLOAD
+echo ""
+echo -en "\e[94m"
+echo -en "GENERADOR DE PAYLOAD "
+echo ""
+echo ""
+echo -en -n  "\e[1;33mPOR FAVOR DIGITE SU HOST: \e[1;36m"
+read host
+echo ""
+echo -en "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf] Access-Control-Allow-Credentials: true, true[lf] Access-Control-Allow-Headers: X-Requested-With,Content-Type, X-Requested-With,Content-Type[lf] Access-Control-Allow-Methods: GET,PUT,OPTIONS,POST,DELETE, GET,PUT,OPTIONS,POST,DELETE[lf] Age: 8, 8[lf] Cache-Control: max-age=86400[lf] public[lf] Connection: keep-alive[lf] Content-Type: text/html; charset=UTF-8[crlf]Content-Length: 9999999999999[crlf]UseDNS: Yes[crlf]Vary: Accept-Encoding[crlf][raw][crlf][crlf][crlf]"
+echo ""
+echo ""
+echo ""
+echo -en "CONNECT [host_port][protocol][crlf]Host: $host [crlf][crlf]"
+echo ""
+echo ""
+sleep 2
+echo ""
+echo -en "BY STEFAN DESTRUCTOR"
+echo ""
+echo ""
+sleep 2
+echo ""
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA REGRESAR AL INICIO"
+read foo
+;;
+7)clear
+echo -en "\e[92m"
+figlet CREDITOS
+echo -en "\e[92m"
+figlet CREADO BY STEFAN DESTRUCTOR
+echo -en "\e[92m"
+figlet DISEÑO 
+echo ""
+sleep 2
+echo -en "\e[92mBY STEFAN - DESTRUCTOR"
+echo ""
+echo ""
+echo -en  "\e[93mTELEGRAM: @elprolayer"
+echo ""
+sleep 2
+echo ""
+echo ""
+echo -en "\e[92mBY REID [TM]"
+echo ""
+echo ""
+echo -en "\e[93mTELEGRAM: @RElDz"
+echo ""
+sleep 2
+echo ""
+echo ""
+echo -en "\e[92mBY 》☠¥☆{QŰÏÑØŅĘ§☠ÝØĮŅÊŘ}☆¥☠《"
+echo ""
+echo ""
+echo -en "\e[93mTELEGRAM: @elprotamovistar"
+echo ""
+sleep 2
+echo ""
+echo ""
+echo -en "\e[92mBY USER#0"
+echo ""
+echo ""
+echo -en "\e[93mTELEGRAM: @Duser_0"
+echo ""
+sleep 2
+echo ""
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA REGRESAR AL INICIO"
+read foo
+;;
+6)clear
+echo -en "\e[93m"
+toilet -f smblock  VELOCIDAD
+echo -en "\e[93m"
+toiet -f smblock DEL HOST
+echo -en -n "\e[93mINGRESE SU HOST : "
+Echo -en "\e[34m"
+read host
+echo ""
+sleep 2
+echo -en "\e[92mCOMPROBANDO VELOCIDAD DE EL HOST DEL HOST INGRESADO"
+echo ""
+sleep 2
+echo ""
+echo -en "\e[92mTEST DE VELOCIDAD DEL HOST COMPLETADO"
+echo ""
+echo ""
+curl https://api.hackertarget.com/nping/?q=$host
+sleep 2
+echo ""
+echo -en "\e[91mPRESIONE ENTER PARA REGRESAR AL INICIO"
+read foo
+;;
+*)clear
+echo -en "\e[96m"                                                                                                  figlet UPS
+echo ""
+echo -en "\e[95mCOMANDO NO VALIALIDOPOR FAVOR INGRESE UN COMANDO VAIDO"
+echo ""
+sleep 2
+bash host.sh
+;;
+esac
+done
+
